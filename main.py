@@ -20,15 +20,15 @@ def proccess_data(filename, sorting_type):
     
     print(f"All films successfully sorted by {sorting_type}:")
     
-    for film in all_films:
-        print(film.title, film.genre, film.date_published, film.actors)
-            
-    
-    
-
-
 
 if __name__ == "__main__":
-    filename = "all_films.txt"
-    sorting_type = 'title'
+    filename = input("Enter filename for data: ")
+    sorting_type_number = int(input("Sorting types: (1)-title, (2)-genre, (3)-date published : "))
+    if sorting_type_number == 1:
+        sorting_type = "title"
+    elif sorting_type_number == 2:
+        sorting_type = "genre"
+    elif sorting_type_number == 3:
+        sorting_type = "date_published"
+    
     proccess_data(filename, sorting_type)
